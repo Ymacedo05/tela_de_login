@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Tela de login 3.0</title>
+        
+        
+        
+        
+        <style>
+        
+        
+            *{
+                padding: 0px;
+                margin: 0px;
+                outline: none;
+            }
+            
+            html, body{
+                height: 100%;
+                width: 100%;
+                text-align: center;
+                display: flex;
+                
+            }
+            
+            body{
+                
+            }
+            
+            div#cont{
+                border: 2px solid gray;
+                border-radius: 15px;
+                box-shadow: 0px 0px 10px 1px lightgray;
+                height: 98%;
+                width: 96%;
+                margin: auto;
+                flex-grow: 0;
+                background: white url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='420' height='720' preserveAspectRatio='none' viewBox='0 0 420 720'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1013%26quot%3b)' fill='none'%3e%3crect width='420' height='720' x='0' y='0' fill='rgba(35%2c 189%2c 167%2c 1)'%3e%3c/rect%3e%3cpath d='M 0%2c201 C 28%2c192.4 84%2c130.4 140%2c158 C 196%2c185.6 224%2c356 280%2c339 C 336%2c322 392%2c126.2 420%2c73L420 720L0 720z' fill='rgba(255%2c 255%2c 255%2c 1)'%3e%3c/path%3e%3cpath d='M 0%2c413 C 28%2c456.8 84%2c620.4 140%2c632 C 196%2c643.6 224%2c488.6 280%2c471 C 336%2c453.4 392%2c529.4 420%2c544L420 720L0 720z' fill='rgba(255%2c 255%2c 255%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1013'%3e%3crect width='420' height='720' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+
+                
+            }
+            
+            
+            h2{
+                padding: 50px;
+                font-size: 2.8em;
+                font-weight: 400;
+                color: white;
+            }
+            
+            div.a{
+                position: relative;
+                
+            }
+            span{
+                position: absolute;
+                left: 60px;
+                bottom: 35px;
+                color: teal;
+                transition-duration: 1s;
+            }
+            input{
+                width: 75%;
+                padding: 15px;
+                font-size: 1.2em;
+                margin-bottom:20px;
+                border-radius: 10px;
+                border: none;
+                border-bottom: 2px solid teal;
+                
+            }
+            
+            input.i-a{
+                margin-top: 12px;
+            }
+            
+            input.i-a:focus ~ span,
+            input.i-a:valid ~ span {
+                bottom: 70px;
+                font-size: 14px;
+                
+            }
+            
+            input.i-a:focus {
+                box-shadow: 0px  3px  2px #23BDA7;
+            }
+            
+            #btn {
+                border-radius:30px;
+                width: 60%;
+                background: #23BDA7;
+                color: white ;
+                margin-top: 40px;
+            }
+            #btn:hover{
+                box-shadow: 0px 0px 12px #23BDA7;
+            }
+
+
+            @media (min-width:450px){
+                
+                div#cont{
+                    max-width:720px;
+                    max-height:800px ;
+                  
+                    background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='724' height='760' preserveAspectRatio='none' viewBox='0 0 724 760'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1252%26quot%3b)' fill='none'%3e%3crect width='724' height='760' x='0' y='0' fill='rgba(35%2c 189%2c 167%2c 1)'%3e%3c/rect%3e%3cpath d='M 0%2c291 C 36.2%2c240.8 108.6%2c55.4 181%2c40 C 253.4%2c24.6 289.6%2c192.8 362%2c214 C 434.4%2c235.2 470.6%2c135 543%2c146 C 615.4%2c157 687.8%2c244.4 724%2c269L724 760L0 760z' fill='rgba(255%2c 255%2c 255%2c 1)'%3e%3c/path%3e%3cpath d='M 0%2c461 C 36.2%2c509 108.6%2c694.4 181%2c701 C 253.4%2c707.6 289.6%2c482.6 362%2c494 C 434.4%2c505.4 470.6%2c769.2 543%2c758 C 615.4%2c746.8 687.8%2c502 724%2c438L724 760L0 760z' fill='rgba(255%2c 255%2c 255%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1252'%3e%3crect width='724' height='760' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e") no-repeat;
+                }
+                
+
+                
+                    
+                
+
+            h2{
+                padding: 70px;
+                padding-bottom: 90px;
+                font-size: 3.5em;
+                font-weight: 400;
+                color: white;
+            }
+
+                span{
+                position: absolute;
+                left: 90px;
+                bottom: 35px;
+                font-size: 1.2em;
+                
+            }
+
+            input.i-a:focus ~ span,
+            input.i-a:valid ~ span {
+                bottom: 68px;
+                font-size: 16px;
+            }
+
+            #btn {
+                border-radius:30px;
+                width: 40%;
+                margin-top: 75px;
+            }
+
+            .i-a{
+                font-size: 1.3em;
+                background: transparent;
+                margin-top: 20px !important;
+            }
+            
+             
+             </style>
+        
+    </head>
+    <body>
+        
+        <div id="cont">
+            
+            <h2>Login</h2>
+            <div class="a">
+                <input type="text" value="" required="" class="i-a"  />
+                <span>Usuário </span>
+            </div>
+            
+            <div class="a">
+                <input type="password" required="" class="i-a" />
+                <span>Senha </span>
+            </div>
+            
+            <div>
+                <input type="button" id="btn" value="Acessar" />
+            </div>
+        </div>
+    </body>
+</html>
