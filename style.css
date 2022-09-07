@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+/*font-family: 'Fredericka the Great', cursive;*/
+
+@import url('https://fonts.googleapis.com/css2?family=Stardos+Stencil&display=swap');
+/*font-family: 'Stardos Stencil', cursive;*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 18px;
+    font-family: 'Stardos Stencil', cursive;
+    background:radial-gradient(rgb(26, 229, 229), rgb(15, 132, 132), rgb(5, 50, 50));
+    
+}
+
+.container {
+    height: 600px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border: 4px solid teal;
+    box-shadow: 0px 0px 0px 10px white;
+    border-radius: 10px;
+}
+
+header{
+    padding: 50px 10px 80px 10px;
+    width: 100%;
+}
+header h1{
+    width: 100%;
+    padding: 10px;
+    background-color: teal;
+    text-align: center;
+    color: white;
+    font-family: 'Fredericka the Great', cursive;
+}
+
+main {
+
+}
+
+main .cobertura{
+    margin-bottom: 15px;
+    width: 300px;
+    position: relative;
+    text-align: center;
+}
+
+main .cobertura input:not([type=checkbox], [type=button]) {
+    height: 45px;
+    width: 100%;
+    border-radius: 20px;
+    border: 0.5px solid silver;
+    text-indent: 15px;
+    font-size: 0.9em;
+    
+}
+
+main .cobertura label:not(.esp){
+    position: absolute;
+    left: 15px;
+    top: 30%;
+    color: silver;
+    transition: all 0.3s;
+}
+main .cobertura input:focus:not([type=button]) {
+    border: 2px solid teal;
+    box-shadow: 3px 3px 3px silver;
+}
+
+main .cobertura input:focus ~ label, main .cobertura input:valid ~ label {
+    top: -9px;
+    padding: 0px 3px;
+    font-size: 0.9em;
+    color: teal;
+    font-weight: 700;
+    background-color: white;
+}
+
+main .cobertura.check{
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+main .cobertura.check input {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    margin-left: 15px;
+}
+
+
+main input[type=button] {
+    width: 200px;
+    height: 50px;
+    border-radius: 30px;
+    margin-top: 50px;
+    border: 3px solid white;
+    background-color: rgb(9, 160, 160);
+    color: white;
+    font-size: 1em;
+    font-weight: 700;
+}
+
+main input[type=button]:active {
+    box-shadow: 0px 0px 0px 4px rgb(9, 160, 160);
+}
+
+@media(max-width:500px) {
+
+    .container {
+        width: 95vw;
+        height: 95vh;
+    }
+}
